@@ -6,7 +6,7 @@
 
 
 body{
-    background: linear-gradient(1250deg, #e2c35d, #d88771) no-repeat fixed;
+    background: linear-gradient(1250deg, #6e97e4, #78b3da) no-repeat fixed;
     color: white;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -33,14 +33,14 @@ form input, form button {
 
 
 form button {
-    color: #d88771;
+    color: #7192d8;
     background: white;
     cursor: pointer;
     transition:  all 0.3s ease;
 }
 
 form button:hover {
-    background: #d88771;
+    background: #7192d8;
     color: white;
 }
 
@@ -72,7 +72,7 @@ form button:hover {
 }
 
 .trash-btn, .complete-btn {
-    background: #fc5126;
+    background: #fa6f4c;
     color: white;
     border: none;
     padding: 1rem;
@@ -98,7 +98,7 @@ form button:hover {
 }
 
 .fall {
-    transform: translateX(75rem);
+    transform: translateX(-50rem) rotateZ(-50deg);
     opacity: 0;
 }
 
@@ -118,7 +118,7 @@ select {
 }
 
 select {
-    color: #ff6f47;
+    color: #7192d8;
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
@@ -126,7 +126,7 @@ select {
 .select::after{
     content: "\25BC";
     position: absolute;
-    background: #ff6f47;
+    background: #7192d8;
     top: -.3rem;
     right: 0;
     padding: 1rem;
@@ -140,5 +140,5 @@ option::selection {
 
 .select:hover::after{
     background: white;
-    color: #ff6f47;
+    color: #7192d8;
 }

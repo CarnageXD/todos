@@ -16,31 +16,34 @@ filterOption.addEventListener('click', filterTodo)
 function addTodo(event) {
     //Preventing default behaviour by button click
     event.preventDefault()
-    //Todo DIV with nested elements 
-    const todoDiv = document.createElement('div')
-    todoDiv.classList.add("todo")
-    //Create list-item
-    const newTodo = document.createElement('li')
-    newTodo.innerText = todoInput.value
-    newTodo.classList.add('todo-item')
-    todoDiv.appendChild(newTodo)
-    //ADD TODO TO LOCALSTORAGE
-    saveLocalTodos(todoInput.value)
-    //CHECK MARK BUTTON
-    const completedButton = document.createElement('button')
-    completedButton.innerHTML = '<i class="fas fa-check"></i>'
-    completedButton.classList.add('complete-btn')
-    todoDiv.appendChild(completedButton)
-    //CHECK TRASH BUTTON
-    const trashButton = document.createElement('button')
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>'
-    trashButton.classList.add('trash-btn')
-    todoDiv.appendChild(trashButton)
-    //finnaly attend to list (ul)
-    todoList.appendChild(todoDiv)
+    //Prevent void query
+    if (todoInput.value) {
+        //Todo DIV with nested elements 
+        const todoDiv = document.createElement('div')
+        todoDiv.classList.add("todo")
+        //Create list-item
+        const newTodo = document.createElement('li')
+        newTodo.innerText = todoInput.value
+        newTodo.classList.add('todo-item')
+        todoDiv.appendChild(newTodo)
+        //ADD TODO TO LOCALSTORAGE
+        saveLocalTodos(todoInput.value)
+        //CHECK MARK BUTTON
+        const completedButton = document.createElement('button')
+        completedButton.innerHTML = '<i class="fas fa-check"></i>'
+        completedButton.classList.add('complete-btn')
+        todoDiv.appendChild(completedButton)
+        //CHECK TRASH BUTTON
+        const trashButton = document.createElement('button')
+        trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+        trashButton.classList.add('trash-btn')
+        todoDiv.appendChild(trashButton)
+        //finnaly attend to list (ul)
+        todoList.appendChild(todoDiv)
 
-    //Clear Todo Input Value
-    todoInput.value = ''
+        //Clear Todo Input Value
+        todoInput.value = ''
+    }
 }
 
 function controlButtonsInList(e) {
